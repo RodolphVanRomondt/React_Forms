@@ -13,6 +13,10 @@ const BoxList = () => {
     setBoxes(boxex => [...boxex, newBox]);
   };
 
+  function removeBox(id) {
+    setBoxes(boxes.filter(box => box.id !== id));
+  }
+
   return (
     <>
       <NewBoxForm addBox={addBox} />
@@ -20,7 +24,9 @@ const BoxList = () => {
         <Box color={box.color}
           width={box.width}
           height={box.height}
-          key={box.id} />)}
+          key={box.id}
+          value={box.id}
+          removeBox={e => removeBox(box.id)} />)}
     </>
   );
 };
