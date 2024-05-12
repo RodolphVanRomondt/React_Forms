@@ -22,6 +22,7 @@ const BoxList = () => {
 
   return (
     <>
+      <h2>Color Box Maker</h2>
       <NewBoxForm addBox={addBox} />
       {boxes.map(box =>
         <Box color={box.color}
