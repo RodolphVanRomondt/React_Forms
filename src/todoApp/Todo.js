@@ -12,7 +12,7 @@ const Todo = ({ todo, value, removeTodo }) => {
       <div
         className="Todo">
         {todo}
-        <i className="bi bi-trash-fill  btn btn-outline-danger btn-sm" onClick={handleRemove}></i>
+        <i className="bi bi-trash-fill btn btn-outline-danger btn-sm" onClick={handleRemove}></i>
       </div>
     </>
   )
