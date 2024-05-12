@@ -1,0 +1,11 @@
+.TodoForm {
+  margin-bottom: 20px;
+}
+
+.TodoForm input {
+  margin-bottom: .6px;
+}
+
+.TodoForm .btn {
+  display: block;
+}

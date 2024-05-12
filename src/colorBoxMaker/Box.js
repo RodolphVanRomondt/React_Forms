@@ -1,7 +1,7 @@
 import React from "react";
 import "./Box.css";
 
-const Box = ({ color, width, height, value, removeBox }) => {
+const Box = ({ color="red", width=100, height=100, value, removeBox }) => {
 
   function handleRemove(e) {
     removeBox(value);

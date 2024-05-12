@@ -1,10 +1,12 @@
 import React from "react";
-import BoxList from "./BoxList";
+import BoxList from "./colorBoxMaker/BoxList";
+import TodoList from "./todoApp/TodoList";
 import "./App.css";
 
 const App = () => (
   <div className="App">
-    <BoxList />
+    <BoxList/>
+    <TodoList />
   </div>
 );
 

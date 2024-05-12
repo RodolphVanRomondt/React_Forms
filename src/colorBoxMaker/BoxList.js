@@ -6,11 +6,14 @@ import Box from "./Box";
 
 const BoxList = () => {
 
-  const [boxes, setBoxes] = useState([{ color: "red", width: 100, height: 100, id: uuid() }]);
+  const [boxes, setBoxes] = useState([]);
 
   const addBox = box => {
     let newBox = { ...box, id: uuid() };
-    setBoxes(boxex => [...boxex, newBox]);
+    newBox.color = newBox.color === "" ? "red" : newBox.color;
+    newBox.width = newBox.width === "" || newBox.width < 10 ? 100 : newBox.width;
+    newBox.height = newBox.height === "" || newBox.height < 10 ? 100 : newBox.height;
+    setBoxes(boxes => [...boxes, newBox]);
   };
 
   function removeBox(id) {
